@@ -1,11 +1,11 @@
-var express = require('express'),
-	open = require('open'),
-	chalk = require('chalk'),
-	path = require('path');
+import express from 'express';
+import open from 'open';
+import chalk from 'chalk';
+import path from 'path';
 
-var  port = 3000;
+const  port = 3000;
 
-var app = new express();
+const app = new express();
 
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, '../src/index.htm'));

@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "JavaScript development environment by Juma Kiwaka",
 	"scripts": {
-		"prestart": "node buildScripts/message.js",
-		"start": "node buildScripts/srcServer.js",
+		"prestart": "babel-node buildScripts/message.js",
+		"start": "babel-node buildScripts/srcServer.js",
 		"localtunnel": "lt --port 3000 --subdomain juma",
 		"share": "npm-run-all --parallel start localtunnel"
 	},
