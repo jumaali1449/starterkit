@@ -1,5 +1,6 @@
 var express = require('express'),
-    open = require('open'),
+	open = require('open'),
+	chalk = require('chalk'),
 	path = require('path');
 
 var  port = 3000;
@@ -15,6 +16,7 @@ app.listen(port, function(err){
 		console.log(err);
 	}else{
 	open('http://localhost:' + port);
-	console.log('dev server started @ http://localhost:', port);
+	let message = 'dev server started @ http://localhost:'+port;
+	console.log(chalk.green(message));
 	}
 });
