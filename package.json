@@ -11,6 +11,8 @@
 	"author": "Juma Kiwaka",
 	"license": "MIT",
 	"dependencies": {
+		"@babel/core": "^7.5.0",
+		"@babel/preset-env": "^7.5.0",
 		"whatwg-fetch": "^3.0.0"
 	},
 	"devDependencies": {
