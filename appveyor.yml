@@ -2,24 +2,24 @@
 environment:
   matrix:
 # node.js
-	- nodejs_version: "10"
-	- nodejs_version: "9"
+ - nodejs_version: "10"
+ - nodejs_version: "9"
 
 # install scripts. (runs after repo cloning)
 
 install:
 #get the latest stable version of node.js or io.js
-	- ps: Install-Product node $env:nodejs_version
+ - ps: Install-Product node $env:nodejs_version
 # install modules
-	- npm install
+ - npm install
 
 #post-install test scripts.
 test_scripts:
 # output useful info for debugging
-	- node --version
-	- npm --version
+ - node --version
+ - npm --version
 # run tests
-	- npm test
+ - npm test
 
 
 # Don't actually build
