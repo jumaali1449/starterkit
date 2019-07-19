@@ -5,13 +5,16 @@
 	"scripts": {
 		"prestart": "babel-node buildScripts/message.js",
 		"start": "babel-node buildScripts/srcServer.js",
-		"dev": "npm-run-all --parallel start lint:watch test:watch",
+		"dev": "npm-run-all --parallel start lint:watch test:watch start-mock",
 		"localtunnel": "lt --port 3000 --subdomain juma",
 		"share": "npm-run-all --parallel start localtunnel",
 		"lint": "esw webpack.config.* src buildScripts --color",
 		"lint:watch": "npm run lint -- --watch",
 		"test": "mocha --reporter progress buildScripts/testSetup.js 'src/**/*.test.js'",
-		"test:watch": "npm run test -- --watch"
+		"test:watch": "npm run test -- --watch",
+		"generate-mock-data": "babel-node buildScripts/generateMockData.js",
+		"prestart-mock": "npm run generate-mock-data",
+		"start-mock": "json-server --watch src/api/db.json --port 3001"
 	},
 	"author": "Juma Kiwaka",
 	"license": "MIT",

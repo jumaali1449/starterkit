@@ -9,11 +9,11 @@ describe('My first test', ()=>{
 });
 
 describe('index.htm', ()=>{
-	it('should say congrats your expre.....', ()=>{
+	it('should have h1 which says...', ()=>{
 		const index = fs.readFileSync('./src/index.htm', 'utf-8');
 		const dom = new JSDOM(index);
 		const h1 = dom.window.document.getElementsByTagName('h1')[0];
-		expect(h1.innerHTML).to.equal('Congrats your express server has been configured correctly!');
+		expect(h1.innerHTML).to.equal('Users');
 		dom.window.close();
 	});
 });

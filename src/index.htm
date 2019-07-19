@@ -4,10 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
 	<title>Homepage</title>
 </head>
 <body>
-	<h1>Congrats your express server has been configured correctly!</h1>
+	<h1>Users</h1>
+	<table border="1">
+		<thead>
+			<th>&nbsp;</th>
+			<th>Id</th>
+			<th>First name</th>
+			<th>Email</th>
+		</thead>
+		<tbody id="userBody">
+
+		</tbody>
+	</table>
 	<script src="bundle.js"></script>
 </body>
 </html>
